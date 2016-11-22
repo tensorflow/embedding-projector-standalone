@@ -1,0 +1,46 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Word2Vec 5K",
+      "tensorShape": [5000, 200],
+      "tensorPath": "oss_data/word2vec_5000_200d_tensors.tsv",
+      "metadataPath": "oss_data/word2vec_5000_200d_labels.tsv"
+    },
+    {
+      "tensorName": "Word2Vec 10K",
+      "tensorShape": [10000, 200],
+      "tensorPath": "oss_data/word2vec_10000_200d_tensors.tsv",
+      "metadataPath": "oss_data/word2vec_10000_200d_labels.tsv"
+    },
+    {
+      "tensorName": "Word2Vec All",
+      "tensorShape": [71291, 200],
+      "tensorPath": "oss_data/word2vec_full_200d_tensors.tsv",
+      "metadataPath": "oss_data/word2vec_full_200d_labels.tsv",
+      "bookmarksPath": "oss_data/word2vec_full_bookmarks.txt"
+    },
+    {
+      "tensorName": "Mnist with images 10K",
+      "tensorShape": [10000, 784],
+      "tensorPath": "oss_data/mnist_10k_784d_tensors.tsv",
+      "metadataPath": "oss_data/mnist_10k_784d_labels.tsv",
+      "sprite": {
+        "imagePath": "oss_data/mnist_10k_sprite.png",
+        "singleImageDim": [28, 28]
+      }
+    },
+    {
+      "tensorName": "Iris",
+      "tensorShape": [150, 4],
+      "tensorPath": "oss_data/iris_tensors.tsv",
+      "metadataPath": "oss_data/iris_labels.tsv"
+    },
+    {
+      "tensorName": "Unit Cube",
+      "tensorShape": [8, 3],
+      "tensorPath": "oss_data/cube_tensors.tsv",
+      "metadataPath": "oss_data/cube_metadata.tsv"
+    }
+  ],
+  "modelCheckpointPath": "Demo datasets"
+}
