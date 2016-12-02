@@ -1,7 +1,13 @@
 {
   "embeddings": [
     {
-      "tensorName": "Word2Vec",
+      "tensorName": "Word2Vec 10K",
+      "tensorShape": [10000, 200],
+      "tensorPath": "oss_data/word2vec_10000_200d_tensors.bytes",
+      "metadataPath": "oss_data/word2vec_10000_200d_labels.tsv"
+    },
+    {
+      "tensorName": "Word2Vec All",
       "tensorShape": [71291, 200],
       "tensorPath": "oss_data/word2vec_full_200d_tensors.bytes",
       "metadataPath": "oss_data/word2vec_full_200d_labels.tsv",
