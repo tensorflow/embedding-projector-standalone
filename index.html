@@ -58,29 +58,13 @@ limitations under the License.
   <link rel="icon" type="image/png" href="favicon.png">
   
   <title>Embedding projector - visualization of high-dimensional data</title>
-  <style include="vz-projector-styles"></style>
-  <style>
-    html {
-      width: 100%;
-      height: 100%;
-    }
-
-    body {
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
-</head>
+  </head>
 <body><div hidden="" by-vulcanize=""><style>
   /* IE 10 support for HTML5 hidden attr */
   [hidden] {
     display: none !important;
   }
-</style>
-
-<style is="custom-style">
+</style><style is="custom-style">
   :root {
 
     --layout: {
@@ -374,8 +358,7 @@ limitations under the License.
 
   }
 
-</style>
-<dom-module id="iron-icon" assetpath="/components_dir/iron-icon/">
+</style><dom-module id="iron-icon" assetpath="/components_dir/iron-icon/">
   <template>
     <style>
       :host {
@@ -472,63 +455,6 @@ limitations under the License.
     <div id="waves"></div>
   </template>
 </dom-module>
-<style is="custom-style">
-
-  :root {
-    /*
-     * You can use these generic variables in your elements for easy theming.
-     * For example, if all your elements use `--primary-text-color` as its main
-     * color, then switching from a light to a dark theme is just a matter of
-     * changing the value of `--primary-text-color` in your application.
-     */
-    --primary-text-color: var(--light-theme-text-color);
-    --primary-background-color: var(--light-theme-background-color);
-    --secondary-text-color: var(--light-theme-secondary-color);
-    --disabled-text-color: var(--light-theme-disabled-color);
-    --divider-color: var(--light-theme-divider-color);
-    --error-color: var(--paper-deep-orange-a700);
-
-    /*
-     * Primary and accent colors. Also see color.html for more colors.
-     */
-    --primary-color: var(--paper-indigo-500);
-    --light-primary-color: var(--paper-indigo-100);
-    --dark-primary-color: var(--paper-indigo-700);
-
-    --accent-color: var(--paper-pink-a200);
-    --light-accent-color: var(--paper-pink-a100);
-    --dark-accent-color: var(--paper-pink-a400);
-
-
-    /*
-     * Material Design Light background theme
-     */
-    --light-theme-background-color: #ffffff;
-    --light-theme-base-color: #000000;
-    --light-theme-text-color: var(--paper-grey-900);
-    --light-theme-secondary-color: #737373;  /* for secondary text and icons */
-    --light-theme-disabled-color: #9b9b9b;  /* disabled/hint text */
-    --light-theme-divider-color: #dbdbdb;
-
-    /*
-     * Material Design Dark background theme
-     */
-    --dark-theme-background-color: var(--paper-grey-900);
-    --dark-theme-base-color: #ffffff;
-    --dark-theme-text-color: #ffffff;
-    --dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
-    --dark-theme-disabled-color: #646464;  /* disabled/hint text */
-    --dark-theme-divider-color: #3c3c3c;
-
-    /*
-     * Deprecated values because of their confusing names.
-     */
-    --text-primary-color: var(--dark-theme-text-color);
-    --default-primary-color: var(--primary-color);
-
-  }
-
-</style>
 <style is="custom-style">
 
   :root {
@@ -849,8 +775,63 @@ limitations under the License.
 
   }
 
-</style>
-<dom-module id="paper-icon-button" assetpath="/components_dir/paper-icon-button/">
+</style><style is="custom-style">
+
+  :root {
+    /*
+     * You can use these generic variables in your elements for easy theming.
+     * For example, if all your elements use `--primary-text-color` as its main
+     * color, then switching from a light to a dark theme is just a matter of
+     * changing the value of `--primary-text-color` in your application.
+     */
+    --primary-text-color: var(--light-theme-text-color);
+    --primary-background-color: var(--light-theme-background-color);
+    --secondary-text-color: var(--light-theme-secondary-color);
+    --disabled-text-color: var(--light-theme-disabled-color);
+    --divider-color: var(--light-theme-divider-color);
+    --error-color: var(--paper-deep-orange-a700);
+
+    /*
+     * Primary and accent colors. Also see color.html for more colors.
+     */
+    --primary-color: var(--paper-indigo-500);
+    --light-primary-color: var(--paper-indigo-100);
+    --dark-primary-color: var(--paper-indigo-700);
+
+    --accent-color: var(--paper-pink-a200);
+    --light-accent-color: var(--paper-pink-a100);
+    --dark-accent-color: var(--paper-pink-a400);
+
+
+    /*
+     * Material Design Light background theme
+     */
+    --light-theme-background-color: #ffffff;
+    --light-theme-base-color: #000000;
+    --light-theme-text-color: var(--paper-grey-900);
+    --light-theme-secondary-color: #737373;  /* for secondary text and icons */
+    --light-theme-disabled-color: #9b9b9b;  /* disabled/hint text */
+    --light-theme-divider-color: #dbdbdb;
+
+    /*
+     * Material Design Dark background theme
+     */
+    --dark-theme-background-color: var(--paper-grey-900);
+    --dark-theme-base-color: #ffffff;
+    --dark-theme-text-color: #ffffff;
+    --dark-theme-secondary-color: #bcbcbc;  /* for secondary text and icons */
+    --dark-theme-disabled-color: #646464;  /* disabled/hint text */
+    --dark-theme-divider-color: #3c3c3c;
+
+    /*
+     * Deprecated values because of their confusing names.
+     */
+    --text-primary-color: var(--dark-theme-text-color);
+    --default-primary-color: var(--primary-color);
+
+  }
+
+</style><dom-module id="paper-icon-button" assetpath="/components_dir/paper-icon-button/">
   <template strip-whitespace="">
     <style>
       :host {
@@ -1872,6 +1853,8 @@ limitations under the License.
   </template>
 
   </dom-module>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700">
 <style is="custom-style">
 
   :root {
@@ -2027,8 +2010,7 @@ limitations under the License.
 
   }
 
-</style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700"><dom-module id="paper-input-char-counter" assetpath="/components_dir/paper-input/">
+</style><dom-module id="paper-input-char-counter" assetpath="/components_dir/paper-input/">
   <template>
     <style>
       :host {
@@ -2431,8 +2413,7 @@ limitations under the License.
 
   }
 
-</style>
-<dom-module id="paper-material-shared-styles" assetpath="/components_dir/paper-material/">
+</style><dom-module id="paper-material-shared-styles" assetpath="/components_dir/paper-material/">
   <template>
     <style>
       :host {
@@ -3076,73 +3057,73 @@ limitations under the License.
 </dom-module>
 
 <dom-module id="iron-autogrow-textarea" assetpath="/components_dir/iron-autogrow-textarea/">
-
-  <style>
-    :host {
-      display: inline-block;
-      position: relative;
-      width: 400px;
-      border: 1px solid;
-      padding: 2px;
-      -moz-appearance: textarea;
-      -webkit-appearance: textarea;
-      overflow: hidden;
-    }
-
-    .mirror-text {
-      visibility: hidden;
-      word-wrap: break-word;
-    }
-
-    .fit {
-      @apply(--layout-fit);
-    }
-
-    textarea {
-      position: relative;
-      outline: none;
-      border: none;
-      resize: none;
-      background: inherit;
-      color: inherit;
-      /* see comments in template */
-      width: 100%;
-      height: 100%;
-      font-size: inherit;
-      font-family: inherit;
-      line-height: inherit;
-      text-align: inherit;
-      @apply(--iron-autogrow-textarea);
-    }
-
-    ::content textarea:invalid {
-      box-shadow: none;
-    }
-
-    textarea::-webkit-input-placeholder {
-      @apply(--iron-autogrow-textarea-placeholder);
-    }
-
-    textarea:-moz-placeholder {
-      @apply(--iron-autogrow-textarea-placeholder);
-    }
-
-    textarea::-moz-placeholder {
-      @apply(--iron-autogrow-textarea-placeholder);
-    }
-
-    textarea:-ms-input-placeholder {
-      @apply(--iron-autogrow-textarea-placeholder);
-    }
-  </style>
   <template>
+    <style>
+      :host {
+        display: inline-block;
+        position: relative;
+        width: 400px;
+        border: 1px solid;
+        padding: 2px;
+        -moz-appearance: textarea;
+        -webkit-appearance: textarea;
+        overflow: hidden;
+      }
+
+      .mirror-text {
+        visibility: hidden;
+        word-wrap: break-word;
+      }
+
+      .fit {
+        @apply(--layout-fit);
+      }
+
+      textarea {
+        position: relative;
+        outline: none;
+        border: none;
+        resize: none;
+        background: inherit;
+        color: inherit;
+        /* see comments in template */
+        width: 100%;
+        height: 100%;
+        font-size: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        text-align: inherit;
+        @apply(--iron-autogrow-textarea);
+      }
+
+      ::content textarea:invalid {
+        box-shadow: none;
+      }
+
+      textarea::-webkit-input-placeholder {
+        @apply(--iron-autogrow-textarea-placeholder);
+      }
+
+      textarea:-moz-placeholder {
+        @apply(--iron-autogrow-textarea-placeholder);
+      }
+
+      textarea::-moz-placeholder {
+        @apply(--iron-autogrow-textarea-placeholder);
+      }
+
+      textarea:-ms-input-placeholder {
+        @apply(--iron-autogrow-textarea-placeholder);
+      }
+    </style>
+
     
     
     <div id="mirror" class="mirror-text" aria-hidden="true">&nbsp;</div>
 
     
     <div class="textarea-container fit">
-      <textarea id="textarea" name$="[[name]]" autocomplete$="[[autocomplete]]" autofocus$="[[autofocus]]" inputmode$="[[inputmode]]" placeholder$="[[placeholder]]" readonly$="[[readonly]]" required$="[[required]]" disabled$="[[disabled]]" rows$="[[rows]]" maxlength$="[[maxlength]]"></textarea>
+      <textarea id="textarea" name$="[[name]]" autocomplete$="[[autocomplete]]" autofocus$="[[autofocus]]" inputmode$="[[inputmode]]" placeholder$="[[placeholder]]" readonly$="[[readonly]]" required$="[[required]]" disabled$="[[disabled]]" rows$="[[rows]]" minlength$="[[minlength]]" maxlength$="[[maxlength]]"></textarea>
     </div>
   </template>
 </dom-module>
@@ -3509,20 +3490,21 @@ paper-textarea {
 
 
 <dom-module id="iron-dropdown" assetpath="/components_dir/iron-dropdown/">
-  <style>
-    :host {
-      position: fixed;
-    }
-
-    #contentWrapper ::content > * {
-      overflow: auto;
-    }
-
-    #contentWrapper.animating ::content > * {
-      overflow: hidden;
-    }
-  </style>
   <template>
+    <style>
+      :host {
+        position: fixed;
+      }
+
+      #contentWrapper ::content > * {
+        overflow: auto;
+      }
+
+      #contentWrapper.animating ::content > * {
+        overflow: hidden;
+      }
+    </style>
+
     <div id="contentWrapper">
       <content id="content" select=".dropdown-content"></content>
     </div>
@@ -3599,7 +3581,6 @@ paper-textarea {
         display: inline-block;
         position: relative;
         text-align: left;
-        cursor: pointer;
 
         /* NOTE(cdata): Both values are needed, since some phones require the
          * value to be `transparent`.
@@ -3665,7 +3646,7 @@ paper-textarea {
 
     
     <span role="button"></span>
-    <paper-menu-button id="menuButton" vertical-align="[[verticalAlign]]" horizontal-align="[[horizontalAlign]]" dynamic-align="[[dynamicAlign]]" vertical-offset="[[_computeMenuVerticalOffset(noLabelFloat)]]" disabled="[[disabled]]" no-animations="[[noAnimations]]" on-iron-select="_onIronSelect" on-iron-deselect="_onIronDeselect" opened="{{opened}}" close-on-activate="" allow-outside-scroll="[[allowOutsideScroll]]">
+    <paper-menu-button id="menuButton" vertical-align="[[verticalAlign]]" horizontal-align="[[horizontalAlign]]" dynamic-align="[[dynamicAlign]]" vertical-offset="[[_computeMenuVerticalOffset(noLabelFloat)]]" disabled="[[disabled]]" no-animations="[[noAnimations]]" on-iron-select="_onIronSelect" on-iron-deselect="_onIronDeselect" opened="{{opened}}" close-on-activate="" allow-outside-scroll="[[allowOutsideScroll]]" restore-focus-on-close="[[restoreFocusOnClose]]">
       <div class="dropdown-trigger">
         <paper-ripple></paper-ripple>
         
@@ -3890,6 +3871,9 @@ paper-dropdown-menu paper-item {
   display: none;
 }
 
+.colorby-container {
+  margin-bottom: 10px;
+}
 </style>
 <div class="title">DATA</div>
 <div class="container">
@@ -3935,7 +3919,7 @@ paper-dropdown-menu paper-item {
   </template>
 
   
-  <template is="dom-if" if="[[_hasChoices(colorOptions)]]">
+  <div hidden$="[[!_hasChoices(colorOptions)]]" class="colorby-container">
     <paper-dropdown-menu id="colorby" no-animations="" label="Color by">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedColorOptionName}}">
         <template is="dom-repeat" items="[[colorOptions]]">
@@ -3946,8 +3930,20 @@ paper-dropdown-menu paper-item {
         </template>
       </paper-listbox>
     </paper-dropdown-menu>
-    <vz-projector-legend render-info="[[colorLegendRenderInfo]]"></vz-projector-legend>
-  </template>
+    <div hidden$="[[!showForceCategoricalColorsCheckbox]]">
+      <paper-checkbox id="force-categorical-checkbox"></paper-checkbox>
+      Use categorical coloring
+      <paper-icon-button icon="help" class="help-icon"></paper-icon-button>
+      <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds="">
+        For metadata fields that have many unique values we use a gradient color map
+        by default. This checkbox allows you to force categorical coloring by a given
+        metadata field.
+      </paper-tooltip>
+    </div>
+    <template dom-if="[[colorLegendRenderInfo]]">
+      <vz-projector-legend render-info="[[colorLegendRenderInfo]]"></vz-projector-legend>
+    </template>
+  </div>
   <paper-checkbox id="normalize-data-checkbox" checked="{{normalizeData}}">
     Sphereize data
     <paper-icon-button icon="help" class="help-icon"></paper-icon-button>
@@ -3963,7 +3959,7 @@ paper-dropdown-menu paper-item {
       </paper-tooltip>
       <paper-button id="upload" class="ink-button" onclick="dataDialog.open()">Load data</paper-button>
     </span>
-    <span>
+    <span id="publish-container">
       <paper-tooltip position="bottom" animation-delay="0" fit-to-visible-bounds="">
         Publish your embedding visualization and data
       </paper-tooltip>
@@ -3974,7 +3970,7 @@ paper-dropdown-menu paper-item {
     <paper-dialog id="dataDialog" with-backdrop="">
       <h2>Load data from your computer</h2>
       <paper-dialog-scrollable class="scrollable-container">
-        <div class="data-step">
+        <div class="data-step" id="upload-tensors-step-container">
           <div class="upload-step">
             <div>
                 <b><span class="step-label">Step 1:</span> Load a TSV file of vectors.</b>
@@ -3998,13 +3994,13 @@ paper-dropdown-menu paper-item {
         <div class="data-step">
           <div class="upload-step">
             <div>
-                <span class="step-label"><b>Step 2</b> (optional):</span> <b>Load a TSV file of metadata.</b>
+                <span class="step-label" id="upload-metadata-label"><b>Step 2</b> (optional):</span> <b>Load a TSV file of metadata.</b>
             </div>
           </div>
           <div class="data-step-contents">
             <div class="data-step-contents-contents">
               Example of 3 data points and 2 columns.<br>
-              <i>Note: the first row is a header.</i>
+              <i>Note: If there is more than one column, the first row will be parsed as column labels.</i>
               <div class="code">
                 <b>Pokémon<span class="delimiter">\t</span>Species</b><br>
                 Wartortle<span class="delimiter">\t</span>Turtle<br>
@@ -4027,7 +4023,7 @@ paper-dropdown-menu paper-item {
         <div>
           <p>
             If you'd like to share your visualization with the world, follow these simple steps.
-            See <a target="_blank" href="https://www.tensorflow.org/versions/master/how_tos/embedding_viz/index.md">this tutorial</a> for more.
+            See <a target="_blank" href="https://www.tensorflow.org/get_started/embedding_viz">this tutorial</a> for more.
           </p>
           <h4><span class="step-label">Step 1:</span> Make data public</h4>
           <p>
@@ -4267,6 +4263,7 @@ paper-dropdown-menu paper-item {
         --paper-progress-secondary-color: var(--paper-slider-secondary-color, --google-blue-300);
         --paper-progress-disabled-active-color: var(--paper-slider-disabled-active-color, --paper-grey-400);
         --paper-progress-disabled-secondary-color: var(--paper-slider-disabled-secondary-color, --paper-grey-400);
+        --calculated-paper-slider-height: var(--paper-slider-height, 2px);
       }
 
       /* focus shows the ripple */
@@ -4277,9 +4274,9 @@ paper-dropdown-menu paper-item {
       #sliderContainer {
         position: relative;
         width: 100%;
-        height: calc(30px + var(--paper-slider-height, 2px));
-        margin-left: calc(15px + var(--paper-slider-height, 2px)/2);
-        margin-right: calc(15px + var(--paper-slider-height, 2px)/2);
+        height: calc(30px + var(--calculated-paper-slider-height));
+        margin-left: calc(15px + var(--calculated-paper-slider-height)/2);
+        margin-right: calc(15px + var(--calculated-paper-slider-height)/2);
       }
 
       #sliderContainer:focus {
@@ -4301,7 +4298,7 @@ paper-dropdown-menu paper-item {
       }
 
       .ring > .bar-container {
-        left: calc(5px + var(--paper-slider-height, 2px)/2);
+        left: calc(5px + var(--calculated-paper-slider-height)/2);
         transition: left 0.18s ease;
       }
 
@@ -4310,21 +4307,21 @@ paper-dropdown-menu paper-item {
       }
 
       .ring.expand:not(.pin) > .bar-container {
-        left: calc(8px + var(--paper-slider-height, 2px)/2);
+        left: calc(8px + var(--calculated-paper-slider-height)/2);
       }
 
       #sliderBar {
         padding: 15px 0;
         width: 100%;
         background-color: var(--paper-slider-bar-color, transparent);
-        --paper-progress-container-color: var(--paper-grey-400);
-        --paper-progress-height: var(--paper-slider-height, 2px);
+        --paper-progress-container-color: var(--paper-slider-container-color, --paper-grey-400);
+        --paper-progress-height: var(--calculated-paper-slider-height);
       }
 
       .slider-markers {
         position: absolute;
         top: calc(14px + var(--paper-slider-height,2px)/2);
-        height: var(--paper-slider-height, 2px);
+        height: var(--calculated-paper-slider-height);
         left: 0;
         right: -1px;
         box-sizing: border-box;
@@ -4341,38 +4338,38 @@ paper-dropdown-menu paper-item {
         display: block;
         margin-left: -1px;
         width: 2px;
-        height: 2px;
+        height: var(--calculated-paper-slider-height);
         border-radius: 50%;
-        background-color: black;
+        background-color: var(--paper-slider-markers-color, #000);
       }
 
-      #sliderKnob {
+      .slider-knob {
         position: absolute;
         left: 0;
         top: 0;
-        margin-left: calc(-15px - var(--paper-slider-height, 2px)/2);
-        width: calc(30px + var(--paper-slider-height, 2px));
-        height: calc(30px + var(--paper-slider-height, 2px));
+        margin-left: calc(-15px - var(--calculated-paper-slider-height)/2);
+        width: calc(30px + var(--calculated-paper-slider-height));
+        height: calc(30px + var(--calculated-paper-slider-height));
       }
 
-      .transiting > #sliderKnob {
+      .transiting > .slider-knob {
         transition: left 0.08s ease;
       }
 
-      #sliderKnob:focus {
+      .slider-knob:focus {
         outline: none;
       }
 
-      #sliderKnob.dragging {
+      .slider-knob.dragging {
         transition: none;
       }
 
-      .snaps > #sliderKnob.dragging {
+      .snaps > .slider-knob.dragging {
         transition: -webkit-transform 0.08s ease;
         transition: transform 0.08s ease;
       }
 
-      #sliderKnobInner {
+      .slider-knob-inner {
         margin: 10px;
         width: calc(100% - 20px);
         height: calc(100% - 20px);
@@ -4389,21 +4386,21 @@ paper-dropdown-menu paper-item {
         transition-timing-function: ease;
       }
 
-      .expand:not(.pin) > #sliderKnob > #sliderKnobInner {
+      .expand:not(.pin) > .slider-knob > .slider-knob-inner {
         -webkit-transform: scale(1.5);
         transform: scale(1.5);
       }
 
-      .ring > #sliderKnob > #sliderKnobInner {
+      .ring > .slider-knob > .slider-knob-inner {
         background-color: var(--paper-slider-knob-start-color, transparent);
         border: 2px solid var(--paper-slider-knob-start-border-color, --paper-grey-400);
       }
 
-      #sliderKnobInner::before {
+      .slider-knob-inner::before {
         background-color: var(--paper-slider-pin-color, --google-blue-700);
       }
 
-      .pin > #sliderKnob > #sliderKnobInner::before {
+      .pin > .slider-knob > .slider-knob-inner::before {
         content: "";
         position: absolute;
         top: 0;
@@ -4417,22 +4414,22 @@ paper-dropdown-menu paper-item {
         transform: rotate(-45deg) scale(0) translate(0);
       }
 
-      #sliderKnobInner::before,
-      #sliderKnobInner::after {
+      .slider-knob-inner::before,
+      .slider-knob-inner::after {
         transition: -webkit-transform .18s ease, background-color .18s ease;
         transition: transform .18s ease, background-color .18s ease;
       }
 
-      .pin.ring > #sliderKnob > #sliderKnobInner::before {
+      .pin.ring > .slider-knob > .slider-knob-inner::before {
         background-color: var(--paper-slider-pin-start-color, --paper-grey-400);
       }
 
-      .pin.expand > #sliderKnob > #sliderKnobInner::before {
+      .pin.expand > .slider-knob > .slider-knob-inner::before {
         -webkit-transform: rotate(-45deg) scale(1) translate(17px, -17px);
         transform: rotate(-45deg) scale(1) translate(17px, -17px);
       }
 
-      .pin > #sliderKnob > #sliderKnobInner::after {
+      .pin > .slider-knob > .slider-knob-inner::after {
         content: attr(value);
         position: absolute;
         top: 0;
@@ -4448,7 +4445,7 @@ paper-dropdown-menu paper-item {
         transform: scale(0) translate(0);
       }
 
-      .pin.expand > #sliderKnob > #sliderKnobInner::after {
+      .pin.expand > .slider-knob > .slider-knob-inner::after {
         -webkit-transform: scale(1) translate(0, -17px);
         transform: scale(1) translate(0, -17px);
       }
@@ -4468,14 +4465,14 @@ paper-dropdown-menu paper-item {
         pointer-events: none;
       }
 
-      .disabled > #sliderKnob > #sliderKnobInner {
+      .disabled > .slider-knob > .slider-knob-inner {
         background-color: var(--paper-slider-disabled-knob-color, --paper-grey-400);
         border: 2px solid var(--paper-slider-disabled-knob-color, --paper-grey-400);
         -webkit-transform: scale3d(0.75, 0.75, 1);
         transform: scale3d(0.75, 0.75, 1);
       }
 
-      .disabled.ring > #sliderKnob > #sliderKnobInner {
+      .disabled.ring > .slider-knob > .slider-knob-inner {
         background-color: var(--paper-slider-knob-start-color, transparent);
         border: 2px solid var(--paper-slider-knob-start-border-color, --paper-grey-400);
       }
@@ -4486,7 +4483,6 @@ paper-dropdown-menu paper-item {
     </style>
 
     <div id="sliderContainer" class$="[[_getClassNames(disabled, pin, snaps, immediateValue, min, expand, dragging, transiting, editable)]]">
-
       <div class="bar-container">
         <paper-progress disabled$="[[disabled]]" id="sliderBar" aria-hidden="true" min="[[min]]" max="[[max]]" step="[[step]]" value="[[immediateValue]]" secondary-progress="[[secondaryProgress]]" on-down="_bardown" on-up="_resetKnob" on-track="_onTrack">
         </paper-progress>
@@ -4500,8 +4496,8 @@ paper-dropdown-menu paper-item {
         </div>
       </template>
 
-      <div id="sliderKnob" on-down="_knobdown" on-up="_resetKnob" on-track="_onTrack" on-transitionend="_knobTransitionEnd">
-          <div id="sliderKnobInner" value$="[[immediateValue]]"></div>
+      <div id="sliderKnob" class="slider-knob" on-down="_knobdown" on-up="_resetKnob" on-track="_onTrack" on-transitionend="_knobTransitionEnd">
+          <div class="slider-knob-inner" value$="[[immediateValue]]"></div>
       </div>
     </div>
 
@@ -5477,8 +5473,20 @@ vz-projector {
 
 </template>
 </dom-module>
-</div>
-  <vz-projector-app documentation-link="https://www.tensorflow.org/versions/master/how_tos/embedding_viz/index.md" bug-report-link="https://github.com/tensorflow/tensorflow/issues" serving-mode="demo" projector-config-json-path="oss_data/oss_demo_projector_config.json" page-view-logging="">
+<style include="vz-projector-styles"></style><style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style></div>
+  <vz-projector-app documentation-link="https://www.tensorflow.org/get_started/embedding_viz" bug-report-link="https://github.com/tensorflow/tensorflow/issues" serving-mode="demo" projector-config-json-path="oss_data/oss_demo_projector_config.json" page-view-logging="">
   </vz-projector-app>
   
   <script src="oss_demo_bin.js"></script></body></html>

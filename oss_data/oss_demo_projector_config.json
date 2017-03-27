@@ -28,6 +28,13 @@
       "tensorShape": [150, 4],
       "tensorPath": "oss_data/iris_tensors.bytes",
       "metadataPath": "oss_data/iris_labels.tsv"
+    },
+    {
+      "tensorName": "GNMT Interlingua",
+      "tensorShape": [9978, 1024],
+      "tensorPath": "oss_data/bnmt_enjako_interlingua_10k_1024_tensors.bytes",
+      "metadataPath": "oss_data/bnmt_enjako_interlingua_10k_1024_metadata.tsv",
+      "bookmarksPath": "oss_data/bnmt_enjako_interlingua_10k_1024_bookmarks.txt"
     }
   ],
   "modelCheckpointPath": "Demo datasets"
