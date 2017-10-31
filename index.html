@@ -1,29 +1,26 @@
 <!doctype html><head>
   <meta charset="UTF-8">
-  <meta name="keywords" content="visualization,embeddings,machine learning,javascript">
+  <meta name="keywords" content="affective,visualization,embeddings,machine learning,javascript">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Embedding projector - visualization of high-dimensional data">
+  <meta property="og:title" content="DeepAffects: High Dimensional Affective Space Visualization">
   <meta property="og:description" content="Visualize high dimensional data.">
-  <meta property="og:url" content="http://projector.tensorflow.org">
-  <meta property="og:image" content="http://projector.tensorflow.org/preview.png">
+  <meta property="og:url" content="http://visualization.deepaffects.com">
+  <meta property="og:image" content="http://visualization.deepaffects.com/preview.png">
 
   <meta name="twitter:card" value="summary_large_image">
-  <meta name="twitter:title" content="Embedding projector - visualization of high-dimensional data">
-  <meta name="twitter:description" content="Visualize high dimensional data.">
-  <meta name="twitter:url" content="http://projector.tensorflow.org">
-  <meta name="twitter:image" content="http://projector.tensorflow.org/preview.png">
+  <meta name="twitter:title" content="DeepAffects - visualization of high dimensional affective space">
+  <meta name="twitter:description" content="Visualize high dimensional affective space data.">
+  <meta name="twitter:url" content="http://visualization.deepaffects.com">
+  <meta name="twitter:image" content="http://visualization.deepaffects.com/preview.png">
 
   <meta http-equiv="cache-control" content="max-age=0">
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
   <meta http-equiv="pragma" content="no-cache">
+  <link rel="icon" type="image/png" href="favicon.ico">
 
-  <meta name="author" content="Daniel Smilkov, Nikhil Thorat, Charles Nicholson, Big Picture">
-
-  <link rel="icon" type="image/png" href="favicon.png">
-  
   <script>/**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
@@ -5379,7 +5376,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --google-grey-300: #e0e0e0;
     --google-grey-500: #9e9e9e;
     --google-grey-700: #616161;
-    
+
     /* Material Design color palette from online spec document */
 
     --paper-red-50: #ffebee;
@@ -5396,7 +5393,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-red-a200: #ff5252;
     --paper-red-a400: #ff1744;
     --paper-red-a700: #d50000;
- 
+
     --paper-pink-50: #fce4ec;
     --paper-pink-100: #f8bbd0;
     --paper-pink-200: #f48fb1;
@@ -5411,7 +5408,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-pink-a200: #ff4081;
     --paper-pink-a400: #f50057;
     --paper-pink-a700: #c51162;
- 
+
     --paper-purple-50: #f3e5f5;
     --paper-purple-100: #e1bee7;
     --paper-purple-200: #ce93d8;
@@ -5426,7 +5423,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-purple-a200: #e040fb;
     --paper-purple-a400: #d500f9;
     --paper-purple-a700: #aa00ff;
- 
+
     --paper-deep-purple-50: #ede7f6;
     --paper-deep-purple-100: #d1c4e9;
     --paper-deep-purple-200: #b39ddb;
@@ -5441,7 +5438,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-deep-purple-a200: #7c4dff;
     --paper-deep-purple-a400: #651fff;
     --paper-deep-purple-a700: #6200ea;
- 
+
     --paper-indigo-50: #e8eaf6;
     --paper-indigo-100: #c5cae9;
     --paper-indigo-200: #9fa8da;
@@ -5456,7 +5453,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-indigo-a200: #536dfe;
     --paper-indigo-a400: #3d5afe;
     --paper-indigo-a700: #304ffe;
- 
+
     --paper-blue-50: #e3f2fd;
     --paper-blue-100: #bbdefb;
     --paper-blue-200: #90caf9;
@@ -5471,7 +5468,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-blue-a200: #448aff;
     --paper-blue-a400: #2979ff;
     --paper-blue-a700: #2962ff;
- 
+
     --paper-light-blue-50: #e1f5fe;
     --paper-light-blue-100: #b3e5fc;
     --paper-light-blue-200: #81d4fa;
@@ -5486,7 +5483,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-light-blue-a200: #40c4ff;
     --paper-light-blue-a400: #00b0ff;
     --paper-light-blue-a700: #0091ea;
- 
+
     --paper-cyan-50: #e0f7fa;
     --paper-cyan-100: #b2ebf2;
     --paper-cyan-200: #80deea;
@@ -5501,7 +5498,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-cyan-a200: #18ffff;
     --paper-cyan-a400: #00e5ff;
     --paper-cyan-a700: #00b8d4;
- 
+
     --paper-teal-50: #e0f2f1;
     --paper-teal-100: #b2dfdb;
     --paper-teal-200: #80cbc4;
@@ -5516,7 +5513,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-teal-a200: #64ffda;
     --paper-teal-a400: #1de9b6;
     --paper-teal-a700: #00bfa5;
- 
+
     --paper-green-50: #e8f5e9;
     --paper-green-100: #c8e6c9;
     --paper-green-200: #a5d6a7;
@@ -5531,7 +5528,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-green-a200: #69f0ae;
     --paper-green-a400: #00e676;
     --paper-green-a700: #00c853;
- 
+
     --paper-light-green-50: #f1f8e9;
     --paper-light-green-100: #dcedc8;
     --paper-light-green-200: #c5e1a5;
@@ -5546,7 +5543,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-light-green-a200: #b2ff59;
     --paper-light-green-a400: #76ff03;
     --paper-light-green-a700: #64dd17;
- 
+
     --paper-lime-50: #f9fbe7;
     --paper-lime-100: #f0f4c3;
     --paper-lime-200: #e6ee9c;
@@ -5561,7 +5558,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-lime-a200: #eeff41;
     --paper-lime-a400: #c6ff00;
     --paper-lime-a700: #aeea00;
- 
+
     --paper-yellow-50: #fffde7;
     --paper-yellow-100: #fff9c4;
     --paper-yellow-200: #fff59d;
@@ -5576,7 +5573,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-yellow-a200: #ffff00;
     --paper-yellow-a400: #ffea00;
     --paper-yellow-a700: #ffd600;
- 
+
     --paper-amber-50: #fff8e1;
     --paper-amber-100: #ffecb3;
     --paper-amber-200: #ffe082;
@@ -5591,7 +5588,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-amber-a200: #ffd740;
     --paper-amber-a400: #ffc400;
     --paper-amber-a700: #ffab00;
- 
+
     --paper-orange-50: #fff3e0;
     --paper-orange-100: #ffe0b2;
     --paper-orange-200: #ffcc80;
@@ -5606,7 +5603,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-orange-a200: #ffab40;
     --paper-orange-a400: #ff9100;
     --paper-orange-a700: #ff6500;
- 
+
     --paper-deep-orange-50: #fbe9e7;
     --paper-deep-orange-100: #ffccbc;
     --paper-deep-orange-200: #ffab91;
@@ -5621,7 +5618,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-deep-orange-a200: #ff6e40;
     --paper-deep-orange-a400: #ff3d00;
     --paper-deep-orange-a700: #dd2c00;
- 
+
     --paper-brown-50: #efebe9;
     --paper-brown-100: #d7ccc8;
     --paper-brown-200: #bcaaa4;
@@ -5632,7 +5629,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-brown-700: #5d4037;
     --paper-brown-800: #4e342e;
     --paper-brown-900: #3e2723;
- 
+
     --paper-grey-50: #fafafa;
     --paper-grey-100: #f5f5f5;
     --paper-grey-200: #eeeeee;
@@ -5643,7 +5640,7 @@ Polymer.PaperInkyFocusBehaviorImpl={observers:["_focusedChanged(receivedFocusFro
     --paper-grey-700: #616161;
     --paper-grey-800: #424242;
     --paper-grey-900: #212121;
- 
+
     --paper-blue-grey-50: #eceff1;
     --paper-blue-grey-100: #cfd8dc;
     --paper-blue-grey-200: #b0bec5;
@@ -9525,11 +9522,11 @@ return this.dampingFactor},set:function(a){console.warn("THREE.OrbitControls: .d
       }
     </style>
 
-    
-    
+
+
     <div id="mirror" class="mirror-text" aria-hidden="true">&nbsp;</div>
 
-    
+
     <div class="textarea-container fit">
       <textarea id="textarea" name$="[[name]]" autocomplete$="[[autocomplete]]" autofocus$="[[autofocus]]" inputmode$="[[inputmode]]" placeholder$="[[placeholder]]" readonly$="[[readonly]]" required$="[[required]]" disabled$="[[disabled]]" rows$="[[rows]]" minlength$="[[minlength]]" maxlength$="[[maxlength]]"></textarea>
     </div>
@@ -10100,18 +10097,18 @@ paper-textarea {
       </paper-tooltip>
     </div>
     <div id="icon-container">
-      
+
       <paper-icon-button id="expand-more" icon="expand-less" on-tap="_expandMore"></paper-icon-button>
       <paper-icon-button id="expand-less" style="display: none" icon="expand-more" on-tap="_expandLess"></paper-icon-button>
     </div>
   </div>
   <iron-collapse id="panel">
-    
+
     <div id="state-section">
       <template is="dom-if" if="[[!savedStates.length]]">
         <p id="no-bookmarks">
             No bookmarks yet, upload a bookmarks file or add a new bookmark by clicking the "+" below.
-        
+
       </template>
 
       <template is="dom-repeat" items="{{savedStates}}">
@@ -10398,12 +10395,12 @@ _disabledChanged:function(a){Polymer.IronControlState._disabledChanged.apply(thi
   <template>
     <style include="paper-dropdown-menu-shared-styles"></style>
 
-    
+
     <span role="button"></span>
     <paper-menu-button id="menuButton" vertical-align="[[verticalAlign]]" horizontal-align="[[horizontalAlign]]" dynamic-align="[[dynamicAlign]]" vertical-offset="[[_computeMenuVerticalOffset(noLabelFloat)]]" disabled="[[disabled]]" no-animations="[[noAnimations]]" on-iron-select="_onIronSelect" on-iron-deselect="_onIronDeselect" opened="{{opened}}" close-on-activate allow-outside-scroll="[[allowOutsideScroll]]" restore-focus-on-close="[[restoreFocusOnClose]]">
       <div class="dropdown-trigger">
         <paper-ripple></paper-ripple>
-        
+
         <paper-input type="text" invalid="[[invalid]]" readonly disabled="[[disabled]]" value="[[selectedItemLabel]]" placeholder="[[placeholder]]" error-message="[[errorMessage]]" always-float-label="[[alwaysFloatLabel]]" no-label-float="[[noLabelFloat]]" label="[[label]]">
           <iron-icon icon="paper-dropdown-menu:arrow-drop-down" suffix></iron-icon>
         </paper-input>
@@ -10662,7 +10659,7 @@ paper-dropdown-menu paper-item {
 </style>
 <div class="title">DATA</div>
 <div class="container">
-  
+
   <template is="dom-if" if="[[_hasChoices(runNames)]]">
     <paper-dropdown-menu no-animations label="[[_getNumRunsLabel(runNames)]] found">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedRun}}">
@@ -10676,7 +10673,7 @@ paper-dropdown-menu paper-item {
   </template>
 
   <template is="dom-if" if="[[tensorNames]]">
-    
+
     <paper-dropdown-menu no-animations label="[[_getNumTensorsLabel(tensorNames)]] found">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedTensor}}">
         <template is="dom-repeat" items="[[tensorNames]]">
@@ -10690,7 +10687,7 @@ paper-dropdown-menu paper-item {
       </paper-listbox>
     </paper-dropdown-menu>
   </template>
-  
+
   <template is="dom-if" if="[[_hasChoices(labelOptions)]]">
     <paper-dropdown-menu no-animations label="Label by">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedLabelOption}}">
@@ -10703,7 +10700,7 @@ paper-dropdown-menu paper-item {
     </paper-dropdown-menu>
   </template>
 
-  
+
   <div hidden$="[[!_hasChoices(colorOptions)]]" class="colorby-container">
     <paper-dropdown-menu id="colorby" no-animations label="Color by">
       <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{selectedColorOptionName}}">
@@ -10750,7 +10747,7 @@ paper-dropdown-menu paper-item {
       </paper-tooltip>
       <paper-button id="host-embedding" class="ink-button" onclick="projectorConfigDialog.open()">Publish</paper-button>
     </span>
-  
+
   <div>
     <paper-dialog id="dataDialog" with-backdrop>
       <h2>Load data from your computer</h2>
@@ -10809,15 +10806,15 @@ paper-dropdown-menu paper-item {
           <p>
             If you'd like to share your visualization with the world, follow these simple steps.
             See <a target="_blank" href="https://www.tensorflow.org/get_started/embedding_viz">this tutorial</a> for more.
-          
+
           <h4><span class="step-label">Step 1:</span> Make data public</h4>
           <p>
             Host tensors, metadata, sprite image, and bookmarks TSV files <i>publicly</i> on the web.
-          
+
           <p>
             One option is using a <a target="_blank" href="https://gist.github.com/">github gist</a>.
             If you choose this approach, make sure to link directly to the raw file.
-          
+
         </div>
         <div>
           <h4><span class="step-label">Step 2:</span> Projector config</h4>
@@ -11893,7 +11890,7 @@ this.metadata=b;this.label=""+this.pointMetadata[this.labelOption]}};b.prototype
     </div>
   </div>
   <div class="container">
-    
+
     <div data-panel="tsne" class="ink-panel-content">
       <div class="slider">
         <label>Dimension</label>
@@ -11932,22 +11929,22 @@ this.metadata=b;this.label=""+this.pointMetadata[this.labelOption]}};b.prototype
       <p>
         <button class="run-tsne ink-button" title="Re-run t-SNE">Re-run</button>
         <button class="stop-tsne ink-button" title="Stop t-SNE">Stop</button>
-      
+
       <p>Iteration: <span class="run-tsne-iter">0</span>
       <p id="tsne-sampling" class="notice">
         For fast results, the data will be sampled down to [[getTsneSampleSizeText()]] points.
-      
+
       <p>
         <iron-icon icon="book" class="book-icon"></iron-icon>
         <a target="_blank" href="http://distill.pub/2016/misread-tsne/">
           How to use t-SNE effectively.
         </a>
-      
+
     </div>
-    
+
     <div data-panel="pca" class="ink-panel-content">
       <div class="two-columns">
-        <div> 
+        <div>
           <paper-dropdown-menu class="pca-dropdown" vertical-align="bottom" no-animations label="X">
             <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{pcaX}}">
               <paper-item disabled class="dropdown-item header">
@@ -11977,7 +11974,7 @@ this.metadata=b;this.label=""+this.pointMetadata[this.labelOption]}};b.prototype
             </paper-listbox>
           </paper-dropdown-menu>
         </div>
-        <div> 
+        <div>
           <paper-dropdown-menu class="pca-dropdown" vertical-align="bottom" no-animations label="Y">
             <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{pcaY}}">
               <paper-item disabled class="dropdown-item header">
@@ -11998,13 +11995,13 @@ this.metadata=b;this.label=""+this.pointMetadata[this.labelOption]}};b.prototype
       <p id="pca-sampling" class="notice">
         PCA is approximate.
         <paper-icon-button icon="help" class="help-icon"></paper-icon-button>
-      
+
       <div id="total-variance">Total variance</div>
       <paper-tooltip for="pca-sampling" position="top" animation-delay="0" fit-to-visible-bounds>
         For fast results, the data was sampled to [[getPcaSampleSizeText()]] points and randomly projected down to [[getPcaSampledDimText()]] dimensions.
       </paper-tooltip>
     </div>
-    
+
     <div data-panel="custom" class="ink-panel-content">
       <paper-dropdown-menu style="width: 100%" no-animations label="Search by">
         <paper-listbox attr-for-selected="value" class="dropdown-content" selected="{{customSelectedSearchByMetadataOption}}">
@@ -12354,7 +12351,7 @@ tSNEis3d:{type:Boolean,value:!0,observer:"_tsneDimensionToggleObserver"},pcaComp
 </div>
 <paper-toast id="toast" always-on-top></paper-toast>
 
-</template> 
+</template>
 <script>//~~WEBPATH~~/vz-projector/vz-projector.js
 var fe=this&&this.__extends||function(){var a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,c){a.__proto__=c}||function(a,c){for(var b in c)c.hasOwnProperty(b)&&(a[b]=c[b])};return function(b,c){function d(){this.constructor=b}a(b,c);b.prototype=null===c?Object.create(c):(d.prototype=c.prototype,new d)}}(),ge=function(a){function b(){return null!==a&&a.apply(this,arguments)||this}fe(b,a);b.prototype.ready=function(){ic=this;this.analyticsLogger=new xc(this.pageViewLogging,this.eventLogging);
 this.analyticsLogger.logPageView();Ic()?(this.selectionChangedListeners=[],this.hoverListeners=[],this.projectionChangedListeners=[],this.distanceMetricChangedListeners=[],this.selectedPointIndices=[],this.neighborsOfFirstPoint=[],this.dataPanel=this.$["data-panel"],this.inspectorPanel=this.$["inspector-panel"],this.inspectorPanel.initialize(this,this),this.projectionsPanel=this.$["projections-panel"],this.projectionsPanel.initialize(this),this.bookmarkPanel=this.$["bookmark-panel"],this.bookmarkPanel.initialize(this,
@@ -12423,7 +12420,7 @@ vz-projector {
 
 <div id="container">
   <div id="appbar">
-    <div>Embedding Projector</div>
+    <div>DeepAffects Visualization</div>
     <div class="icons">
       <a title="Documentation" target="_blank" href="[[documentationLink]]">
         <paper-icon-button icon="help-outline"></paper-icon-button>
@@ -12449,11 +12446,11 @@ vz-projector {
 Polymer({is:"vz-projector-app",properties:{pageViewLogging:{type:Boolean,value:!1},eventLogging:{type:Boolean,value:!1}}});</script>
 </dom-module>
 
-  
-  
-  
 
-  <title>Embedding projector - visualization of high-dimensional data</title>
+
+
+
+  <title>DeepAffects Viz - visualization of high-dimensional affective space data</title>
   <style include="vz-projector-styles"></style>
   <style>
     html {
@@ -12470,7 +12467,5 @@ Polymer({is:"vz-projector-app",properties:{pageViewLogging:{type:Boolean,value:!
   </style>
 
 <body>
-  <vz-projector-app documentation-link="https://www.tensorflow.org/get_started/embedding_viz" bug-report-link="https://github.com/tensorflow/tensorflow/issues" serving-mode="demo" projector-config-json-path="oss_data/oss_demo_projector_config.json" page-view-logging>
+  <vz-projector-app serving-mode="demo" projector-config-json-path="oss_data/oss_demo_projector_config.json" page-view-logging>
   </vz-projector-app>
-
-
