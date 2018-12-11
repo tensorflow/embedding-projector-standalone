@@ -1,6 +1,12 @@
 {
   "embeddings": [
     {
+      "tensorName": "CENT3",
+      "tensorShape": [512, 64],
+      "tensorPath": "oss_data/cent_3.tsv",
+      "metadataPath": "oss_data/label_512_new.tsv"
+    },
+    {
       "tensorName": "Word2Vec 10K",
       "tensorShape": [10000, 200],
       "tensorPath": "oss_data/word2vec_10000_200d_tensors.bytes",
