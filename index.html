@@ -10804,7 +10804,24 @@ d.prototype.initialize=function(e,g){var h=this;this.projector=e;g.registerProje
 function(){var e=this.serializeAllSavedStates();e=window.URL.createObjectURL(new Blob([e],{type:"text/plain"}));var g=document.createElement("a");document.body.appendChild(g);g.style.display="none";g.href=e;g.download="state";g.click();document.body.removeChild(g);window.URL.revokeObjectURL(e)};d.prototype._uploadFile=function(){this.querySelector("#state-file").click()};d.prototype.setupUploadButton=function(){var e=this,g=this.querySelector("#state-file");g.onchange=function(){var h=g.files[0];
 g.value="";var k=new FileReader;k.onload=function(){var l=JSON.parse(k.result);e.savedStatesValid(l)?(e.addStates(l),e.loadSavedState(0)):a.logging.setWarningMessage("Unable to load bookmarks: wrong dataset, expected dataset "+("with shape ("+l[0].dataSetDimensions+")."))};k.readAsText(h)}};d.prototype.addStates=function(e){if(null==e)this.savedStates=[];else for(var g=0;g<e.length;g++)e[g].isSelected=!1,this.push("savedStates",e[g]);this.updateHasStates()};d.prototype.clearStateSelection=function(){for(var e=
 0;e<this.savedStates.length;e++)this.setSelectionState(e,!1)};d.prototype._radioButtonHandler=function(e){e=this.getParentDataIndex(e);this.loadSavedState(e);this.setSelectionState(e,!0)};d.prototype.loadSavedState=function(e){for(var g=0;g<this.savedStates.length;g++)this.savedStates[g].isSelected?this.setSelectionState(g,!1):e===g&&(this.setSelectionState(g,!0),this.ignoreNextProjectionEvent=!0,this.projector.loadState(this.savedStates[g]))};d.prototype.setSelectionState=function(e,g){this.savedStates[e].isSelected=
-g;this.notifyPath("savedStates."+e+".isSelected",g,!1)};d.prototype.getParentDataIndex=function(e){for(var g=0;g<e.path.length;g++){var h=e.path[g].getAttribute("data-index");if(null!=h)return+h}return-1};d.prototype._clearButtonHandler=function(e){e=this.getParentDataIndex(e);this.splice("savedStates",e,1);this.updateHasStates()};d.prototype._labelChange=function(e){var g=this.getParentDataIndex(e);this.savedStates[g].label=e.target.value};d.prototype._isSelectedState=function(e){return e===this.selectedState};
+g;this.notifyPath("savedStates."+e+".isSelected",g,!1)};
+d.prototype.getParentDataIndex = function(e) {
+    // Check if the event path is empty and fallback to target and parentNode
+    if (!e.path || e.path.length === 0) {
+        var dataIndex = e.target.getAttribute('data-index') || e.target.parentNode && e.target.parentNode.getAttribute('data-index');
+        return dataIndex !== null ? +dataIndex : -1;
+    }
+
+    // Existing logic for checking the path
+    for (var g = 0; g < e.path.length; g++) {
+        var currentElement = e.path[g];
+        var dataIndex = currentElement.getAttribute('data-index') || currentElement.parentNode && currentElement.parentNode.getAttribute('data-index');
+        if (dataIndex !== null) return +dataIndex;
+    }
+    return -1;
+};
+
+d.prototype._clearButtonHandler=function(e){e=this.getParentDataIndex(e);this.splice("savedStates",e,1);this.updateHasStates()};d.prototype._labelChange=function(e){var g=this.getParentDataIndex(e);this.savedStates[g].label=e.target.value};d.prototype._isSelectedState=function(e){return e===this.selectedState};
 d.prototype._isNotSelectedState=function(e){return e!==this.selectedState};d.prototype.serializeAllSavedStates=function(){return JSON.stringify(this.savedStates)};d.prototype.loadSavedStates=function(e){this.savedStates=JSON.parse(e);this.updateHasStates()};d.prototype.updateHasStates=function(){this.hasStates=0!==this.savedStates.length};d.prototype.savedStatesValid=function(e){for(var g=0;g<e.length;g++)if(e[g].dataSetDimensions[0]!==this.projector.dataSet.dim[0]||e[g].dataSetDimensions[1]!==this.projector.dataSet.dim[1])return!1;
 return!0};return d}(a.BookmarkPanelPolymer);a.BookmarkPanel=b;document.registerElement(b.prototype.is,b)})(wc||(wc={}));
 </script>
